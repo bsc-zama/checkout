@@ -2,19 +2,27 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=https://qr.paypay.ne.jp/p2p01_Rmj6xanwunz7ubVG">
     <title>PayPayへ移動中...</title>
 
     <script>
-        window.location.href = "https://qr.paypay.ne.jp/p2p01_Rmj6xanwunz7ubVG";
+        // ここだけ変更すればOK
+        const PAYPAY_URL = "https://qr.paypay.ne.jp/p2p01_Rmj6xanwunz7ubVG";
+
+        // 自動リダイレクト
+        window.location.href = PAYPAY_URL;
     </script>
 </head>
 <body>
     <p>PayPayの支払いページへ移動しています。</p>
-    <p>自動で移動しない場合は、以下をタップしてください。</p>
 
-    <a href="https://qr.paypay.ne.jp/p2p01_Rmj6xanwunz7ubVG">
-        PayPayを開く
-    </a>
+    <p>
+        自動で移動しない場合は
+        <a id="paypay-link">こちらをタップしてください</a>
+    </p>
+
+    <script>
+        // リンク先も同じ変数を使用
+        document.getElementById("paypay-link").href = PAYPAY_URL;
+    </script>
 </body>
 </html>
