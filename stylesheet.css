@@ -3,7 +3,7 @@ a {
 }
 
 .half-size {
-    width: 50vw;
+    width: 50%;
     max-width: 300px;
     height: auto;
 }
